@@ -1,14 +1,13 @@
 .hexagon {
-  width: 160px;
-  height: 138px;
+  //width: 160px;
+  //height: 138px;
   position: absolute;
-  display: inline-flex;
-  -webkit-box-pack: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
   flex-wrap: wrap;
   background-image: url('sss.svg');
-  left: 120px;
-  top: 138.564px;
+  //left: 120px;
+  //top: 138.564px;
 }
