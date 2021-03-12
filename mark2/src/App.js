@@ -23,7 +23,7 @@ class App extends React.PureComponent {
       <div className="App">
         <Menu setRadius={this.setRadius}/>
         <Grid radius={radius}/>
-        <Status  status={status}/>
+        <Status status={status}/>
         <Hints/>
       </div>
     )
