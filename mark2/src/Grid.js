@@ -29,114 +29,12 @@ const param = [
         width: 36
     },
 ]
-// const arr = [1, 2, 3, 4, 5, 6, 7]
-const arr = [
-    {x: 0, y: 0, z: 0},
-    {x: 0, y: -1, z: 1},
-    {x: 0, y: 1, z: -1},
 
-    {x: 1, y: 0, z: -1},
-    {x: 1, y: -1, z: 0},
-
-    {x: -1, y: 0, z: 1},
-    {x: -1, y: 1, z: 0},
-]
-const arr2 = [
-
-    {x: 0, y: 2, z: -2},
-    {x: 0, y: 1, z: -1},
-    {x: 0, y: 0, z: 0},
-    {x: 0, y: -1, z: 1},
-    {x: 0, y: -2, z: 2},
-
-    {x: 1, y: 1, z: -2},
-    {x: 1, y: 0, z: -1},
-    {x: 1, y: -1, z: 0},
-    {x: 1, y: -2, z: 1},
-
-//  {x: 1, y: -2, z: 1}
-//  {x: 1, y: -1, z: -0}
-//  {x: 1, y: 0, z: -1}
-//  {x: 1, y: 1, z: -2}
-
-    {x: 2, y: 0, z: -2},
-    {x: 2, y: -1, z: -1},
-    {x: 2, y: -2, z: 0},
-
-    {x: -1, y: 2, z: -1},
-    {x: -1, y: 1, z: 0},
-    {x: -1, y: 0, z: 1},
-    {x: -1, y: -1, z: 2},
-
-    {x: -2, y: 2, z: 0},
-    {x: -2, y: 1, z: 1},
-    {x: -2, y: 0, z: 2},
-]
-
-const arr3 = [
-
-    {x: 0, y: 3, z: -3},
-    {x: 0, y: 2, z: -2},
-    {x: 0, y: 1, z: -1},
-    {x: 0, y: 0, z: 0},
-    {x: 0, y: -1, z: 1},
-    {x: 0, y: -2, z: 2},
-    {x: 0, y: -3, z: 3},
-
-    {x: 1, y: 1, z: -2},
-    {x: 1, y: 0, z: -1},
-    {x: 1, y: -1, z: 0},
-    {x: 1, y: -2, z: 1},
-
-//  {x: 1, y: -2, z: 1}
-//  {x: 1, y: -1, z: -0}
-//  {x: 1, y: 0, z: -1}
-//  {x: 1, y: 1, z: -2}
-
-    {x: 2, y: 0, z: -2},
-    {x: 2, y: -1, z: -1},
-    {x: 2, y: -2, z: 0},
-
-    {x: -1, y: 2, z: -1},
-    {x: -1, y: 1, z: 0},
-    {x: -1, y: 0, z: 1},
-    {x: -1, y: -1, z: 2},
-
-    {x: -2, y: 2, z: 0},
-    {x: -2, y: 1, z: 1},
-    {x: -2, y: 0, z: 2},
-
-
-    {x: 0, y: 3, z: -3},
-    {x: 0, y: 2, z: -2},
-    {x: 0, y: 1, z: -1},
-    {x: 0, y: 0, z: 0},
-    {x: 0, y: -1, z: 1},
-    {x: 0, y: -2, z: 2},
-    {x: 0, y: -3, z: 3},
-
-
-    {x: -3, y: 3, z: 0},
-    {x: -3, y: 2, z: 1},
-    {x: -3, y: 1, z: 2},
-    {x: -3, y: 0, z: 3},
-]
 
 
 class Grid extends React.PureComponent {
     radius = 2
-    startingPoint = {x: 0, y: 0, z: 0}
-    count = this.radius * 3 + 1
-    ar1 = [2, 4, 2, 4]
-    ar3 = [2, 2, 4, 4]
-    sum = (arr) => {
-       const result =  arr.reduce((previousValue, currentItem, index, arr) => {
 
-        })
-
-        return result
-
-    }
     collectX = () => {
         let arr = []
         const radius = this.radius + 1
@@ -157,16 +55,12 @@ class Grid extends React.PureComponent {
                 }
             }
         }
-        console.log('tost arr', arr)
 
         return arr
     }
 
     render() {
-        // console.log('tost this.radius', this.radius)
         const arr = this.collectX()
-        // const ar = param[this.radius].arr
-// console.log('tost ar', ar)
         return (
             <div className='grid'>
                 {arr.map((el, index) => <Hexagon

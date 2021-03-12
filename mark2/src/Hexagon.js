@@ -15,7 +15,6 @@ class Hexagon extends React.PureComponent {
         const {height, radius} = this.props
         const startValue = height * radius
         const row = 2 * z + x
-        // const row = Math.abs(y) + Math.abs(z)
         const value = height * row * 0.5
         return `${startValue + value}px`
     }
