@@ -1,7 +1,5 @@
 import React from 'react'
 
-import './Hexagon.scss'
-
 class Hexagon extends React.PureComponent {
 
     el = React.createRef()
@@ -20,7 +18,7 @@ class Hexagon extends React.PureComponent {
     }
 
     render() {
-        const {x, y, z, value, height, width} = this.props
+        const {x, y, z, height, width} = this.props
         const top = this.getTop(x, y, z)
         const left = this.getLeft(x, y, z)
         const style = {top, left, height, width}
@@ -31,11 +29,8 @@ class Hexagon extends React.PureComponent {
                  data-z={z}
                  style={style}
             >
-                {/*<div>top:{top}</div>*/}
                 <div>x:{x}</div>
                 <div>y:{y}|z:{z}</div>
-                {/*<div>{y}|{z}</div>*/}
-                {/*<div>left:{left}</div>*/}
             </div>
         )
     }

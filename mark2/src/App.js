@@ -1,7 +1,6 @@
 import React from 'react'
 
-import './App.scss';
-import './main.scss';
+import './App.scss'
 
 import { Hints } from './Hints'
 import { Status } from './Status'
@@ -9,19 +8,26 @@ import { Menu } from './Menu'
 import { Grid } from './Grid'
 
 class App extends React.PureComponent {
-  state={
-    status: true
+  state = {
+    status: true,
+    radius: 2
   }
+
+  setRadius = (radius) => {
+    this.setState({ radius })
+  }
+
   render () {
+    const { radius, status } = this.state
     return (
       <div className="App">
-        <Menu />
-        <Grid />
-        <Status status={this.state.status} />
-        <Hints />
+        <Menu setRadius={this.setRadius}/>
+        <Grid radius={radius}/>
+        <Status  status={status}/>
+        <Hints/>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

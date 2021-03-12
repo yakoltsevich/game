@@ -1,12 +1,21 @@
 .App {
   height: 600px;
   width: 400px;
-  //background-color: gray;
-}
-.menu{
-
 }
 
-.hints{
+.grid {
+  min-height: 430px;
+  width: 100%;
+  border: red;
+  position: relative;
+}
 
+.hexagon {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url('hexagon.svg');
 }

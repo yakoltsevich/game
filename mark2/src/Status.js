@@ -1,6 +1,4 @@
 import React from 'react'
-import './Status.scss'
-
 
 class Status extends React.PureComponent {
 
